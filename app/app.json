@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "cineplus",
+    "slug": "cineplus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#1B1B1B",
+      "flexdirection": "row",
+      "justifyContent": "center",
+      "alignItems": "center"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Se necesita acceso a la cámara para la detección facial."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1B1B1B"
+      },
+      "package": "com.br.cineplus"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1861761c-22b0-4601-8dc8-f394660d2851"
+      }
+    },
+    "theme": {
+      "textColor": "#ffffff"
+    }
+  }
+}
