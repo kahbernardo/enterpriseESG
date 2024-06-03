@@ -10,15 +10,26 @@ export const Container = styled.View<ITheme>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${(p) => themes[p.themeSelected].colors.v1};
   flex-grow: 1;
-  padding-top: ${screenHeight * 0.06};
+  height: ${screenHeight};
+  background-color: ${(p) => themes[p.themeSelected].colors.v1};
 `;
+
+export const Title = styled.Text`
+  display: flex;
+  text-align: center;
+  font-size: 29px;
+  font-family: ${themes.fonts.Itim_400Regular};
+  color: #BFBFBF;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`;
+
 
 export const Content = styled.View<ITheme>`
   display: flex;
   flex-grow: 1;
-  background-color: ${(p) => themes[p.themeSelected].colors.v2};
+  margin: 0 22px;
 `;
 
 export const ListMovies = styled.View`

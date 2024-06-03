@@ -1,0 +1,80 @@
+Endpoint para Criar um Novo Evento
+Rota: POST /events
+Payload:
+{
+  "title": "GEduc",
+  "description": "Em 2024, o tema do encontro será “Educação por essência: construindo trajetórias”.",
+  "dateRange": "3 a 5 de abril de 2024",
+  "location": "Centro de Convenções Rebouças, São Paulo",
+  "image": "data:image/png;base64,<base64encodedimage>"
+}
+
+Endpoint para Obter Todos os Eventos
+Rota: GET /events
+Resposta:
+[
+  {
+    "_id": "60f7c89f4f1a2c0017d28a77",
+    "title": "GEduc",
+    "description": "Em 2024, o tema do encontro será “Educação por essência: construindo trajetórias”.",
+    "dateRange": "3 a 5 de abril de 2024",
+    "location": "Centro de Convenções Rebouças, São Paulo",
+    "image": "data:image/png;base64,<base64encodedimage>"
+  },
+  {
+    "_id": "60f7c89f4f1a2c0017d28a78",
+    "title": "Bett Brasil",
+    "description": "A Bett Brasil é uma conferência e exposição de tecnologia educacional.",
+    "dateRange": "23 a 26 de abril de 2024",
+    "location": "Expo Center Norte, São Paulo",
+    "image": "data:image/png;base64,<base64encodedimage>"
+  }
+]
+
+Endpoint para Obter um Evento pelo ID
+Rota: GET /events/:id
+Resposta:
+{
+  "_id": "60f7c89f4f1a2c0017d28a77",
+  "title": "GEduc",
+  "description": "Em 2024, o tema do encontro será “Educação por essência: construindo trajetórias”.",
+  "dateRange": "3 a 5 de abril de 2024",
+  "location": "Centro de Convenções Rebouças, São Paulo",
+  "image": "data:image/png;base64,<base64encodedimage>"
+}
+
+Endpoint para Atualizar um Evento pelo ID
+Rota: PATCH /events/:id
+Payload:
+{
+  "title": "GEduc Atualizado",
+  "description": "Descrição atualizada do evento.",
+  "dateRange": "3 a 5 de abril de 2024",
+  "location": "Centro de Convenções Rebouças, São Paulo",
+  "image": "data:image/png;base64,<base64encodedimage>"
+}
+Resposta:
+{
+  "_id": "60f7c89f4f1a2c0017d28a77",
+  "title": "GEduc Atualizado",
+  "description": "Descrição atualizada do evento.",
+  "dateRange": "3 a 5 de abril de 2024",
+  "location": "Centro de Convenções Rebouças, São Paulo",
+  "image": "data:image/png;base64,<base64encodedimage>"
+}
+
+
+Endpoint para Deletar um Evento pelo ID
+Rota: DELETE /events/:id
+Resposta:
+{
+  "message": "Evento deletado com sucesso",
+  "event": {
+    "_id": "60f7c89f4f1a2c0017d28a77",
+    "title": "GEduc",
+    "description": "Em 2024, o tema do encontro será “Educação por essência: construindo trajetórias”.",
+    "dateRange": "3 a 5 de abril de 2024",
+    "location": "Centro de Convenções Rebouças, São Paulo",
+    "image": "data:image/png;base64,<base64encodedimage>"
+  }
+}

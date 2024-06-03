@@ -164,7 +164,7 @@ const InputForm = ({ type = EInputType.text, ...props }: propState) => {
   return (
     <St.Container themeSelected={theme} size={size}>
       <St.Content themeSelected={theme}>
-        <St.Label>{label}</St.Label>
+        {label && <St.Label>{label}</St.Label>}
         <Controller
           control={control}
           rules={{

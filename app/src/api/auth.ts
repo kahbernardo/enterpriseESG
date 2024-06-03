@@ -5,7 +5,6 @@ import {
   IRegisterResponse,
   IRegsiterUserData,
 } from '@domain/interfaces/api';
-import serviceMovies from '@service/serviceMovies';
 import { setItem, getItem } from '@utils/storage';
 
 const API_BASE_URL = 'http://localhost:3526';
@@ -70,9 +69,9 @@ export const login = async (
     }
 
     await setItem('token', response?.data?.token);
-    await serviceMovies.onMovies();
     return data;
   } catch (error) {
+    console.log(error)
     return undefined;
   }
 };

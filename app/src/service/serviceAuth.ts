@@ -28,11 +28,12 @@ const onLogin = async (credentials: ILogin, navigate: any) => {
     mail: credentials.mail,
     password: credentials.password,
   });
-  
+
   if (!response) {
     return;
   }
 
+  console.log("Login successful");
   await navigate()
 };
 
@@ -57,7 +58,4 @@ const onRegister = async (credentials: IRegister, navigate: any) => {
 };
 
 export default { onLogin, onRegister };
-function useNavigation(): { dispatch: any; } {
-  throw new Error('Function not implemented.');
-}
 
