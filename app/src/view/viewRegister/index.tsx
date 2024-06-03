@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+import { Image } from 'react-native';
 
 import { ButtonGo } from '@components/buttonGo';
 import { InputForm } from '@components/inputForm';
@@ -30,69 +31,65 @@ const ViewRegister = () => {
     <S.Container themeSelected={theme}>
       <S.Contents>
         <S.Header>
-          <S.Title>BLUE</S.Title>
-          <S.Subtitle>Detector de Anomalias</S.Subtitle>
+          <S.Logo>
+            <Image
+              source={require('../../assets/images/globo.png')}
+              style={{ width: '100%' }}
+              resizeMode="contain"
+            />
+          </S.Logo>
         </S.Header>
-        <S.Form>
-          <FormProvider {...methods}>
-            <InputForm
-              theme={theme}
-              type={EInputType.text}
-              name={'name'}
-              label={'Nome'}
-            />
-            <InputForm
-              theme={theme}
-              type={EInputType.mail}
-              name={'email'}
-              label={'E-mail'}
-            />
-            <S.InputForm>
-              <S.InputFormCol1>
-                <InputForm
-                  theme={theme}
-                  type={EInputType.text}
-                  name={'document'}
-                  label={'Documento'}
-                />
-              </S.InputFormCol1>
-              <S.InputFormCol2>
-                <InputForm
-                  theme={theme}
-                  type={EInputType.text}
-                  name={'phone'}
-                  label={'Telefone'}
-                />
-              </S.InputFormCol2>
-            </S.InputForm>
-            <InputForm
-              theme={theme}
-              type={EInputType.text}
-              name={'role'}
-              label={'Quem sou'}
-            />
-          </FormProvider>
-        </S.Form>
-        <S.Buttons>
-          <S.Button>
-            <ButtonGo
-              theme={theme}
-              label={'CADASTRAR'}
-              onPress={async () => {
-                const data: any = await methods.getValues();
-                await serviceAuth.onRegister(data, route.home);
-              }}
-            />
-          </S.Button>
-          <S.Button>
-            <ButtonGo
-              theme={theme}
-              type={EThemeButtomType.secondary}
-              label={'FECHAR'}
-              onPress={route.login}
+        <S.FormBase>
+          <S.Form>
+            <FormProvider {...methods}>
+              <InputForm
+                theme={theme}
+                type={EInputType.text}
+                name={'name'}
+                label={'Nome'}
               />
-          </S.Button>
-        </S.Buttons>
+              <InputForm
+                theme={theme}
+                type={EInputType.mail}
+                name={'email'}
+                label={'E-mail'}
+              />
+              <InputForm
+                theme={theme}
+                type={EInputType.password}
+                name={'password'}
+                label={'Senha'}
+              />
+              <InputForm
+                theme={theme}
+                type={EInputType.password}
+                name={'password'}
+                label={'Confirmação'}
+              />
+            </FormProvider>
+          </S.Form>
+
+          <S.Buttons>
+            <S.Button>
+              <ButtonGo
+                theme={theme}
+                label={'CADASTRAR'}
+                onPress={async () => {
+                  const data: any = await methods.getValues();
+                  await serviceAuth.onRegister(data, route.home);
+                }}
+              />
+            </S.Button>
+            <S.Button>
+              <ButtonGo
+                theme={theme}
+                type={EThemeButtomType.secondary}
+                label={'FECHAR'}
+                onPress={route.login}
+              />
+            </S.Button>
+          </S.Buttons>
+        </S.FormBase>
       </S.Contents>
       <S.Footer>
         <S.FooterBase>

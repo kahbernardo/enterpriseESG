@@ -53,7 +53,7 @@ const InputForm = ({ type = EInputType.text, ...props }: propState) => {
   const GetErros = () => {
     const dataError = errors[props.name];
     const message = dataError?.message;
-    const returnMessage: any = message || '';
+    const returnMessage: any = message || '';    
     return <St.ErrorText>{returnMessage}</St.ErrorText>;
   };
 

@@ -51,11 +51,12 @@ export const Title = styled.Text`
   font-family: 'Itim_400Regular';
   font-size: 36px;
   color: #717070;
+  margin-top: 20px;
 `;
 
 export const Logo = styled.View`
   display: flex;
-  margin-top: 25px;  
+  margin-top: 0px;  
 `;
 
 export const LogoText = styled.View`

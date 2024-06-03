@@ -7,31 +7,22 @@ import styled, { css } from "styled-components/native";
 export const Container = styled.View<ITheme>`
   display: flex;
   flex-direction: column;
-  width:${(p) => p.size ? `${p.size}%` : '100%' };
 `;
 
 export const Content = styled.View<ITheme>`
   display: flex;
-  flex-direction: column;
-  padding-top: 0;
+  flex-direction: column;    
+
+
 `;
 
 interface IBase {
   showIcons?: boolean;
 }
 
-const baseShowIcons = css`
-  margin-left: 6;
-  margin-right: 6;
-  margin-bottom: 6px;
-`;
-
 export const Base = styled.View<IBase>`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  ${(p) => p.showIcons === true && baseShowIcons}
+  display: flex;  
+  flex-direction: column;  
 `;
 
 export const Icon = styled.View`
@@ -63,13 +54,13 @@ const inputPositionRightCSS = css``;
 export const Input = styled.TextInput.attrs<IInput>(props => ({
   placeholderTextColor: '#93C7E0' // substitua pelo código da cor desejada
 }))<IInput>`
-  flex-grow: 1;
+  display: flex;
   border-width: 1px;
   border-color: #93C7E0;
   border-radius: 6px;
   background-color: #fff;
-  font-size: ${(p) => (p.size === EInputSize.regular ? "17px" : "20px")};
-  padding: 15px 15px;
+  font-size: ${(p) => (p.size === EInputSize.regular ? "13px" : "20px")};
+  padding: 11px 10px;
   color: ${(p) => themes[p.themeSelected].inputForm.color};
   font-weight: 400;
   ${(p) => p.showIcons === true && inputShowIconsCSS};
@@ -90,7 +81,7 @@ export const ErrorText = styled.Text`
   font-size: 15px;
   letter-spacing: 1px;
   margin-right: 4px;
-  height: 18px;
+  height: 11px;
 `;
 
 export const LabelBase = styled.View`
@@ -100,10 +91,9 @@ export const LabelBase = styled.View`
 
 export const Label = styled.Text`
   display: flex;
-  color: #93C7E0;
-  font-size: 18px;
+  color: #6E6E6E;
+  font-size: 16px;
   letter-spacing: 1px;
-  margin: 5px 0;
 `;
 
 export const InputBase = styled.Text`

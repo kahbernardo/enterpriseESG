@@ -2,20 +2,24 @@ import themes from '@themes/themes';
 import styled from 'styled-components/native';
 
 export const Container = styled.View<{ themeSelected: string }>`
-  flex: 1;
-  background-color: ${({ themeSelected }) => themeSelected === 'dark' ? '#333' : '#f0f0f0'};
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: ${({ themeSelected }) =>
+    themeSelected === 'dark' ? '#333' : '#f0f0f0'};
 `;
 
 export const Contents = styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
 `;
 
 export const Header = styled.View`
   margin-bottom: 20px;
   align-items: center;
+  margin: 0 4%;
+  background-color: red;
 `;
 
 export const Title = styled.Text`
@@ -31,12 +35,11 @@ export const Subtitle = styled.Text`
 `;
 
 export const Form = styled.View`
-  width: 100%;
+  margin: 15px;
 `;
 
 export const Buttons = styled.View`
-  margin-top: 20px;
-  width: 100%;
+  margin: 0 4%;
   align-items: center;
 `;
 
@@ -46,24 +49,24 @@ export const Button = styled.View`
 `;
 
 export const InputForm = styled.View`
-  flex-direction: row;  
+  flex-direction: row;
 `;
 
 export const InputFormCol1 = styled.View`
   flex-direction: column;
-  flex-grow: 2;  
+  flex-grow: 2;
   margin-right: 15px;
 `;
 
 export const InputFormCol2 = styled.View`
   flex-direction: column;
-  flex-grow: 2;  
+  flex-grow: 2;
 `;
-
 
 export const Footer = styled.View`
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
 `;
 
 export const FooterBase = styled.View`
@@ -89,4 +92,20 @@ export const TitleFooterSpan = styled.Text`
   color: ${themes.default.colors.v10};
   margin: 0 5px;
   font-family: 'Itim_400Regular';
+`;
+
+export const FormBase = styled.View`
+  display: flex;
+  background-color: #baeaff;
+  border-radius: 8px;
+  border-color: #a4e1ff;
+  border-width: 1px;
+  margin: 0 4%;
+  margin-top: 15px;
+`;
+
+export const Logo = styled.View`
+  display: flex;
+  width: 50%;  
+  background-color: aqua;
 `;

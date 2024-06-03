@@ -32,28 +32,20 @@ const ViewSplash = () => {
   return (
     <S.Container themeSelected={theme}>
       <S.Contents>
-        <S.Header>
-          <S.LogoText>
-            <svg.LogoText />
-          </S.LogoText>
-          <S.Title>Detector de Anomalias</S.Title>
+        <S.Header>          
           <S.Logo>
             <Image
-              source={require('../../assets/images/logo.png')}
-              style={{ width: 350 }}
+              source={require('../../assets/images/globo.png')}
               resizeMode="contain"
             />
           </S.Logo>
+          <S.Title>Saber Global</S.Title>
         </S.Header>
       </S.Contents>
       <S.Footer>
         <S.Buttons>
           <S.Button>
-            <ButtonGo
-              theme={theme}
-              label={'ENTRAR'}
-              onPress={route.login}
-            />
+            <ButtonGo theme={theme} label={'ENTRAR'} onPress={route.login} />
           </S.Button>
           <S.Button>
             <ButtonGo

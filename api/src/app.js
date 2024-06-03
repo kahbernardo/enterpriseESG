@@ -1,8 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import eventRoutes from "./modules/monitoring/eventRoutes";
-import postRoutes from "./modules/management/postRoutes";
+import eventRoutes from "./modules/event/eventRoutes";
+import postRoutes from "./modules/post/postRoutes";
 
 import loginRoutes from "./modules/login/loginRoutes";
 import authenticateToken from "./modules/middleware/authMiddleware";
@@ -16,7 +16,6 @@ dotenv.config();
 
 const app = express();
 
-// Set the limit for express.json()
 app.use(express.json({ limit: "100mb" }));
 app.use(cors());
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));

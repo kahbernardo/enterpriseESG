@@ -18,23 +18,34 @@ export const Contents = styled.View`
 
 export const Header = styled.View`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   margin: 0 15px;
   margin-top: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 `;
 
 
+export const FormBase = styled.View`
+  display: flex;
+  margin: 0 4%;
+  background-color: #baeaff;
+  border-radius: 8px;
+  border-color: #a4e1ff;
+  border-width: 1px;
+`;
+
 export const Form = styled.View`
   display: flex;
-  margin: 0 6%;
+  margin: 15px;  
 `;
 
 export const Logo = styled.View`
   display: flex;
   margin-top: 15px;  
   margin-bottom: 15px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const LogoText = styled.View`
@@ -76,14 +87,35 @@ export const TitleFooterSpan = styled.Text`
 export const Buttons = styled.View`
   display: flex;
   flex-direction: column;
-  margin: 0 25px;
+  margin: 0 15px;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const Button = styled.View`
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 8px 0;
+  padding: 5px 0;
 `;
 
+
+export const Title = styled.Text`
+  display: flex;
+  font-family: 'Itim_400Regular';
+  font-size: 24px;
+  color: #717070;
+  text-align: left;
+`;
+
+export const Text = styled.Text`
+  display: flex;
+  font-family: 'Itim_400Regular';
+  font-size: 15px;
+  letter-spacing: 0.5;
+  text-align: justify;
+  color: #939393;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 0;
+`;

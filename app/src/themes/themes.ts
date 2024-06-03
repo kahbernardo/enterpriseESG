@@ -66,7 +66,7 @@ const themes: TThemes = {
       bgBorder: colors.v3,
     },
     inputForm: {
-      color: colors.v10,
+      color: colors.v9,
       bg: colors.v4,
       bgBorder: colors.v3,
     },

@@ -32,58 +32,60 @@ const ViewLogin = () => {
     <S.Container themeSelected={theme}>
       <S.Contents>
         <S.Header>
-          <S.LogoText>
-            <svg.LogoText />
-          </S.LogoText>
           <S.Logo>
             <Image
-              source={require('../../assets/images/logo.png')}
-              style={{ width: 300 }}
+              source={require('../../assets/images/globo.png')}              
+              style={{ width: '100%' }}
               resizeMode="contain"
             />
           </S.Logo>
+          <S.Title>Saber Global</S.Title>
+          <S.Text>Uma rede focada em promover a educação de qualidade,   conectando pessoas, instituições e recursos educacionais 
+de forma colaborativa e    sustentável.</S.Text>
         </S.Header>
-        <S.Form>
-          <FormProvider {...methods}>
-            <InputForm
-              position={EInputPosition.center}
-              theme={theme}
-              type={EInputType.mail}
-              isLowerCase={true}
-              name={'mail'}
-              placeholder={''}
-            />
+        <S.FormBase>
+          <S.Form>
+            <FormProvider {...methods}>
+              <InputForm
+                position={EInputPosition.center}
+                theme={theme}
+                type={EInputType.mail}
+                isLowerCase={true}
+                name={'mail'}
+                label={'Email'}
+              />
 
-            <InputForm
-              position={EInputPosition.center}
-              theme={theme}
-              type={EInputType.password}
-              isLowerCase={true}
-              name={'password'}
-              placeholder={''}
-            />
-          </FormProvider>
-        </S.Form>        
-        <S.Buttons>
-          <S.Button>
-            <ButtonGo
-              theme={theme}
-              label={'ENTRAR'}
-              onPress={async () => {
-                const data: ILogin = await methods.getValues();
-                await serviceAuth.onLogin(data, route.home);
-              }}
-            />
-          </S.Button>
-          <S.Button>
-            <ButtonGo
-              theme={theme}
-              type={EThemeButtomType.secondary}
-              label={'CADASTRAR'}
-              onPress={route.register}
-            />
-          </S.Button>
-        </S.Buttons>
+              <InputForm
+                position={EInputPosition.center}
+                theme={theme}
+                type={EInputType.password}
+                isLowerCase={true}
+                name={'password'}
+                label={'Senha'}
+              />
+            </FormProvider>
+          </S.Form>
+          <S.Buttons>
+            <S.Button>
+              <ButtonGo
+                theme={theme}
+                label={'ENTRAR'}
+                onPress={async () => {
+                  const data: ILogin = await methods.getValues();
+                  await serviceAuth.onLogin(data, route.home);
+                }}
+              />
+            </S.Button>
+            <S.Button>
+              <ButtonGo
+                theme={theme}
+                type={EThemeButtomType.secondary}
+                label={'CADASTRAR'}
+                onPress={route.register}
+              />
+            </S.Button>
+          </S.Buttons>
+        </S.FormBase>
       </S.Contents>
       <S.Footer>
         <S.FooterBase>
