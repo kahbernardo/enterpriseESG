@@ -1,19 +1,16 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import * as S from './styles';
-
-import svg from '@assets/svg';
 import { ButtonGo } from '@components/buttonGo';
 import { InputForm } from '@components/inputForm';
 import { ContextNavigation } from '@context/contextNavigation';
 import { ContextTheme } from '@context/contextTheme';
-import { EInputPosition, EInputType } from '@domain/enum/EInput';
+import { EInputType } from '@domain/enum/EInput';
 import { IContextTheme } from '@domain/interfaces/IContextTheme';
 import { TNavigation } from '@domain/types/TNavigation';
-import { ETheme } from '@domain/enum/ETheme';
-import serviceAuth from "@service/serviceAuth";
-import { IRegister } from "@domain/interfaces/register";
+import serviceAuth from '@service/serviceAuth';
+import * as S from './styles';
+import { EThemeButtomType } from '@domain/enum/EThemeButtomType';
 
 const ViewRegister = () => {
   const { route } = useContext<TNavigation>(ContextNavigation);
@@ -21,11 +18,11 @@ const ViewRegister = () => {
 
   const methods = useForm({
     defaultValues: {
-      name:'',
-      mail: '',
-      password: '',
-      passwordConf: '',
-      remember: true,
+      name: '',
+      email: '',
+      document: '',
+      phone: '',
+      role: '',
     },
   });
 
@@ -33,59 +30,81 @@ const ViewRegister = () => {
     <S.Container themeSelected={theme}>
       <S.Contents>
         <S.Header>
-          <svg.LogoCinePlus />
+          <S.Title>BLUE</S.Title>
+          <S.Subtitle>Detector de Anomalias</S.Subtitle>
         </S.Header>
         <S.Form>
           <FormProvider {...methods}>
-          <InputForm
+            <InputForm
               theme={theme}
-              type={EInputType.name}
-              isLowerCase={true}
+              type={EInputType.text}
               name={'name'}
               label={'Nome'}
             />
             <InputForm
               theme={theme}
               type={EInputType.mail}
-              isLowerCase={true}
-              name={'mail'}
-              label={'Email'}
+              name={'email'}
+              label={'E-mail'}
             />
+            <S.InputForm>
+              <S.InputFormCol1>
+                <InputForm
+                  theme={theme}
+                  type={EInputType.text}
+                  name={'document'}
+                  label={'Documento'}
+                />
+              </S.InputFormCol1>
+              <S.InputFormCol2>
+                <InputForm
+                  theme={theme}
+                  type={EInputType.text}
+                  name={'phone'}
+                  label={'Telefone'}
+                />
+              </S.InputFormCol2>
+            </S.InputForm>
             <InputForm
               theme={theme}
-              type={EInputType.password}
-              isLowerCase={true}
-              name={'password'}
-              label={'Senha'}
-            />
-            <InputForm
-              theme={theme}
-              type={EInputType.password}
-              isLowerCase={true}
-              name={'passwordConf'}
-              label={'Confirmação de senha'}
+              type={EInputType.text}
+              name={'role'}
+              label={'Quem sou'}
             />
           </FormProvider>
         </S.Form>
         <S.Buttons>
-          <S.ButtonGo>
-            <ButtonGo theme={theme} label={'Salvar'} 
-                            onPress={async () => {
-                              const data: IRegister = await methods.getValues();                
-                              await serviceAuth.onRegister(data, route.home);
-                            }}   
-            />
-          </S.ButtonGo>
-          <S.ButtonGo>
+          <S.Button>
             <ButtonGo
               theme={theme}
-              label={'Cancelar'}
-              onPress={route.login}
-              type={2}
+              label={'CADASTRAR'}
+              onPress={async () => {
+                const data: any = await methods.getValues();
+                await serviceAuth.onRegister(data, route.home);
+              }}
             />
-          </S.ButtonGo>
+          </S.Button>
+          <S.Button>
+            <ButtonGo
+              theme={theme}
+              type={EThemeButtomType.secondary}
+              label={'FECHAR'}
+              onPress={route.login}
+              />
+          </S.Button>
         </S.Buttons>
       </S.Contents>
+      <S.Footer>
+        <S.FooterBase>
+          <S.TitleFooter>
+            Ao criar um conta voce concorda com nosso
+          </S.TitleFooter>
+          <S.TitleFooterSpan>termos</S.TitleFooterSpan>
+          <S.TitleFooter> e </S.TitleFooter>
+          <S.TitleFooterSpan>politicas de privacidade</S.TitleFooterSpan>
+          <S.TitleFooter>.</S.TitleFooter>
+        </S.FooterBase>
+      </S.Footer>
     </S.Container>
   );
 };

@@ -1,0 +1,132 @@
+Rotas e Payloads para o Modelo de Postagens
+Rota: POST /posts
+Payload:
+{
+  "user": "TodosPelaEducação",
+  "content": "A Educação só é de qualidade se for para todos. E isso significa assegurar o desenvolvimento pleno e garantir o acesso incondicional para todas as crianças e jovens em suas diversidades.",
+  "images": [
+    "data:image/png;base64,<base64encodedimage1>",
+    "data:image/png;base64,<base64encodedimage2>"
+  ]
+}
+
+Rota: GET /posts
+Resposta:
+
+[
+  {
+    "_id": "60f7c89f4f1a2c0017d28a77",
+    "user": "TodosPelaEducação",
+    "content": "A Educação só é de qualidade se for para todos. E isso significa assegurar o desenvolvimento pleno e garantir o acesso incondicional para todas as crianças e jovens em suas diversidades.",
+    "images": [
+      "data:image/png;base64,<base64encodedimage1>",
+      "data:image/png;base64,<base64encodedimage2>"
+    ],
+    "likes": 123,
+    "comments": [
+      {
+        "user": "Usuario1",
+        "comment": "Muito bom!",
+        "timestamp": "2024-06-03T12:34:56Z"
+      }
+    ],
+    "shares": 45,
+    "timestamp": "2024-06-03T10:00:00Z"
+  },
+  {
+    "_id": "60f7c89f4f1a2c0017d28a78",
+    "user": "GEduc",
+    "content": "O GEduc é o evento de gestão educacional realizado pela Humu.",
+    "images": [],
+    "likes": 89,
+    "comments": [
+      {
+        "user": "Usuario2",
+        "comment": "Evento incrível!",
+        "timestamp": "2024-06-03T12:35:56Z"
+      }
+    ],
+    "shares": 23,
+    "timestamp": "2024-06-03T11:00:00Z"
+  }
+]
+
+Rota: GET /posts/:id
+Resposta:
+
+{
+  "_id": "60f7c89f4f1a2c0017d28a77",
+  "user": "TodosPelaEducação",
+  "content": "A Educação só é de qualidade se for para todos. E isso significa assegurar o desenvolvimento pleno e garantir o acesso incondicional para todas as crianças e jovens em suas diversidades.",
+  "images": [
+    "data:image/png;base64,<base64encodedimage1>",
+    "data:image/png;base64,<base64encodedimage2>"
+  ],
+  "likes": 123,
+  "comments": [
+    {
+      "user": "Usuario1",
+      "comment": "Muito bom!",
+      "timestamp": "2024-06-03T12:34:56Z"
+    }
+  ],
+  "shares": 45,
+  "timestamp": "2024-06-03T10:00:00Z"
+}
+
+Rota: PATCH /posts/:id
+Payload:
+
+{
+  "content": "Conteúdo atualizado.",
+  "images": [
+    "data:image/png;base64,<base64encodedimage3>"
+  ]
+}
+Resposta:
+
+{
+  "_id": "60f7c89f4f1a2c0017d28a77",
+  "user": "TodosPelaEducação",
+  "content": "Conteúdo atualizado.",
+  "images": [
+    "data:image/png;base64,<base64encodedimage3>"
+  ],
+  "likes": 123,
+  "comments": [
+    {
+      "user": "Usuario1",
+      "comment": "Muito bom!",
+      "timestamp": "2024-06-03T12:34:56Z"
+    }
+  ],
+  "shares": 45,
+  "timestamp": "2024-06-03T10:00:00Z"
+}
+
+Rota: DELETE /posts/:id
+Resposta:
+
+{
+  "message": "Post deletado com sucesso",
+  "post": {
+    "_id": "60f7c89f4f1a2c0017d28a77",
+    "user": "TodosPelaEducação",
+    "content": "A Educação só é de qualidade se for para todos. E isso significa assegurar o desenvolvimento pleno e garantir o acesso incondicional para todas as crianças e jovens em suas diversidades.",
+    "images": [
+      "data:image/png;base64,<base64encodedimage1>",
+      "data:image/png;base64,<base64encodedimage2>"
+    ],
+    "likes": 123,
+    "comments": [
+      {
+        "user": "Usuario1",
+        "comment": "Muito bom!",
+        "timestamp": "2024-06-03T12:34:56Z"
+      }
+    ],
+    "shares": 45,
+    "timestamp": "2024-06-03T10:00:00Z"
+  }
+}
+

@@ -23,10 +23,8 @@ export default ({ children }: any) => {
     home: (data: any) => goRoute(show.route.home, data),
     menu: (data: any) => goRoute(show.route.menu, data),
     login: (data: any) => goRoute(show.route.login, data),
-    reward: (data: any) => goRoute(show.route.reward, data),
     register: (data: any) => goRoute(show.route.register, data),
-    movieRegister: (data: any) => goRoute(show.route.movieRegister, data),
-    movieDetail: (data: any) => goRoute(show.route.movieDetail, data),
+    details: (data: any) => goRoute(show.route.details, data),
   };
 
   const navigation: TNavigation = {
