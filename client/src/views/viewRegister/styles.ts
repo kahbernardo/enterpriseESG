@@ -11,12 +11,14 @@ export const Container = styled.div`
   align-items: center;
   flex-grow: 1;
   flex-direction: row;
-  background-color: #01234B;
+  background-color: #FFFF;
 `;
 
 export const Body = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
 `;
 
 export const Icon = styled.div`
@@ -24,7 +26,7 @@ export const Icon = styled.div`
   width: 600px;  
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px 0;
 `;
 
 export const LogoCine = styled.img`
@@ -38,8 +40,10 @@ export const Form = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 500px;
-  margin: 0 50px 0 60px;
-  padding: 50px 0;
+  height:fit-content;
+  padding: 15px;
+  background-color:#E1F1F8;
+  border-radius:10px;
 `;
 
 export const Image = styled.div`
@@ -96,4 +100,47 @@ export const LinkLabel = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+`;
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content:space-between;
+  align-items:flex-end
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+
+export const Title = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #734E00;
+  text-align: center;
+`;
+
+export const TitleBase = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:32px;
+  margin: 30px 0;
+  width:910px;
+`;
+export const UpperIcon = styled.div`
+  display: flex;
+  width: 363px;  
+  height:280px;
+  justify-content: space-between;
+  align-items: flex-start;
+  position:absolute;
+  top:20px;
+  right:30px;
 `;
