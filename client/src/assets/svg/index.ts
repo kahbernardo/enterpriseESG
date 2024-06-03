@@ -7,6 +7,10 @@ import { ReactComponent as LogoSmall } from './logoSmall.svg';
 import { ReactComponent as PlusCircle } from './plusCircle.svg';
 import { ReactComponent as ArrowBack } from './arrowBack.svg';
 import { ReactComponent as Star } from './star.svg';
+import { ReactComponent as Globo } from './globo.svg';
+import { ReactComponent as Onu } from './onu.svg';
+import { ReactComponent as SDG } from './SDG.svg';
+
 
 const svg = {
   EcoMilesPlanet,
@@ -16,7 +20,10 @@ const svg = {
   LogoSmall,
   PlusCircle,
   ArrowBack,
-  Star
+  Star,
+  Globo,
+  Onu,
+  SDG,
 };
 
 export default svg;

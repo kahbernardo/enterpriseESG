@@ -6,6 +6,7 @@ import LinkLabel from 'components/linkLabel';
 import { EInputPosition, EInputType } from 'domains/enums/EInput';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as S from './styles';
+import svg from 'assets/svg';
 
 import serviceAuth from 'services/serviceAuth';
 import { ILogin } from 'domains/interfaces/login';
@@ -25,14 +26,30 @@ const ViewLogin = () => {
   return (
     <S.Container>
       <S.Body>
+        <S.Row>
+          <S.Column>
+          <S.Title>Saber Global</S.Title>
+          <S.TitleBase>
+            {"Uma rede focada em promover a educação de qualidade, conectando pessoas, instituições e recursos educacionais de forma colaborativa e    sustentável."}
+          </S.TitleBase>
+          </S.Column>
+          <S.UpperIcon>
+            <svg.SDG height={120}/>
+            <svg.Onu height={120}/>
+          </S.UpperIcon>
+        </S.Row>
+      </S.Body>
+      <S.InnerBody>
         <S.Icon>
-          <S.LogoCine src={require('../../assets/png/logoCine.png')} alt={''} />
+        <svg.Globo height={321} onClick={() => {
+            navigate('/')
+          }} />
         </S.Icon>
         <FormProvider {...methods}>
           <S.Form>
             <S.Input>
               <InputDefault
-                label={'mail'}
+                label={'Email'}
                 position={EInputPosition.right}
                 type={EInputType.mail}
                 isLowerCase={true}
@@ -65,14 +82,15 @@ const ViewLogin = () => {
               </S.Button>
             </S.Buttons>
             <S.Registers>
-              <S.Or>ou</S.Or>
-              <S.LinkLabel>
-                <LinkLabel label={'Cadastre-se'} onClick={() => { navigate('/register') }} />
-              </S.LinkLabel>
+            <ButtonGo
+                  label={'Cadastrar'}
+                  onClick={() => { navigate('/register') }} 
+                  type={3}
+                />
             </S.Registers>
           </S.Form>
         </FormProvider>
-      </S.Body>
+      </S.InnerBody>
     </S.Container>
   );
 };

@@ -24,7 +24,7 @@ display: flex;
 text-align: center;
 font-size: 15px;
 font-family: ${themes.fontFamily.inter};
-color: #b9b9b9;
+color: #6E6E6E;
 letter-spacing: 2px;
 margin-left: 5px;
 `;
@@ -63,7 +63,9 @@ export const Input = styled.input<IInput>`
   background-color: transparent;
   margin: 5px 0;
   outline: none;
+  background-color:#FFF;
   border-bottom: 2px solid #ececec;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
   display: flex;
   flex-grow: 1;

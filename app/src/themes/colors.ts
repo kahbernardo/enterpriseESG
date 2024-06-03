@@ -3,7 +3,7 @@ const color = {
   black: "#000000",
   dark1: "#200726",
 
-  v1: "#01234B",
+  v1: "#FFF",
   v2: "#01234B",
   v12: "#F6D2FF",
   v3: "#D9ADE4",
