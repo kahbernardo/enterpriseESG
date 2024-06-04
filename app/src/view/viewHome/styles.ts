@@ -10,9 +10,9 @@ export const Container = styled.View<ITheme>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1;
-  height: ${screenHeight};
-  background-color: ${(p) => themes[p.themeSelected].colors.v1};
+  height: 100%;
+  background-color: ${(p) => themes[p.themeSelected].colors.v1};  
+  
 `;
 
 export const Title = styled.Text`
@@ -30,6 +30,8 @@ export const Content = styled.View<ITheme>`
   display: flex;
   flex-grow: 1;
   margin: 0 22px;
+  margin-top: 70px;
+  
 `;
 
 export const ListMovies = styled.View`

@@ -33,11 +33,12 @@ const ViewRegister = () => {
         <S.Header>
           <S.Logo>
             <Image
-              source={require('../../assets/images/globo.png')}
-              style={{ width: '100%' }}
+              source={require('../../assets/images/globoSmall.png')}
+              style={{ width: '90%' }}
               resizeMode="contain"
             />
           </S.Logo>
+          <S.Title>Saber Global</S.Title>
         </S.Header>
         <S.FormBase>
           <S.Form>

@@ -17,7 +17,6 @@ const AppStart = () => {
         <NativeRouter>
           <ContextGlobalIntance>
             <St.Container>
-              <Menu />
               <St.Content>
                 <ControllerApp>
                   <Routes />

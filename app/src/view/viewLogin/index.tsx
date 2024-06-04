@@ -3,7 +3,6 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { Image } from 'react-native';
 
 import { ButtonGo } from '@components/buttonGo';
-import { ButtonLink } from '@components/buttonLink';
 import { InputForm } from '@components/inputForm';
 import { ContextNavigation } from '@context/contextNavigation';
 import { ContextTheme } from '@context/contextTheme';
@@ -13,7 +12,6 @@ import { TNavigation } from '@domain/types/TNavigation';
 import { ILogin } from '@domain/interfaces/login';
 import serviceAuth from '@service/serviceAuth';
 import * as S from './styles';
-import svg from '@assets/svg';
 import { EThemeButtomType } from '@domain/enum/EThemeButtomType';
 
 const ViewLogin = () => {

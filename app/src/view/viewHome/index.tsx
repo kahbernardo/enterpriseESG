@@ -6,22 +6,37 @@ import { ContextTheme } from '@context/contextTheme';
 import { IContextTheme } from '@domain/interfaces/IContextTheme';
 import { TNavigation } from '@domain/types/TNavigation';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import LatestIncidents  from '@components/latestIncidents';
-import ListIncidents from '@components/listIncidents';
+import Recommendations, { IRecommendation } from '@components/recommendations';
+import PostList from '@components/postsList';
+import svg from '@assets/svg';
 
-const data = [
-  { state: 'BA', city: 'Salvador', value: 15, color: '#4CAF50' },
-  { state: 'BA', city: 'Ponta da Cruz', value: 50, color: '#FFEB3B' },
-  { state: 'RS', city: 'Tamandai', value: 100, color: '#F44336' },
-  { state: 'RS', city: 'Torres', value: 75, color: '#FF9800' },
+const recommendations: IRecommendation[] = [
+  { id: 1, src: require('../../assets/images/rec01.png'), alt: 'Sitiolândia' },
+  { id: 2, src: require('../../assets/images/rec02.png'), alt: 'UNESCO' },
+  { id: 3, src: require('../../assets/images/rec03.png'), alt: 'Liga Ventures' },
+  { id: 4, src: require('../../assets/images/rec04.png'), alt: 'AILOS' },
 ];
 
-const dataListIncidents = [
-  { label: 'Agrupamento Incomum de Barcos', percentage: '96%', color: '#F44336' },
-  { label: 'Pesca em Áreas Protegidas', percentage: '12%', color: '#FF9800' },
-  { label: 'Diminuição Rápida da População', percentage: '50%', color: '#FFEB3B' },
-  { label: 'Poluição Costeira', percentage: '15%', color: '#4CAF50' },
+const posts = [
+  {
+    id: 1,
+    icon: svg.IconBand,
+    title: 'TodosPelaEducação',
+    content: 'A Educação só é de qualidade se for para todos. E isso significa assegurar o desenvolvimento pleno e garantir o acesso incondicional para todas as crianças e jovens em suas diversidades.',
+    images: [
+      require('../../assets/images/imgMeninaAutista.png'),
+      require('../../assets/images/imgMeninaBasquete.png'),
+    ],
+  },
+  {
+    id: 2,
+    icon: svg.Group2,
+    title: 'GEduc',
+    content: 'O GEduc é o evento de gestão educacional realizado pela Humus, empresa que atua com capacitação de instituições de ensino e desenvolvimento humano. Em 2024, o tema do encontro será “Educação por essência: construindo trajetórias”.',
+    images: [
+      require('../../assets/images/imgMeninaBasquete.png'),
+    ],
+  },
 ];
 
 const ViewHome = () => {
@@ -30,16 +45,11 @@ const ViewHome = () => {
 
   return (
     <S.Container themeSelected={theme}>
-      <S.Title>Detector de Anobalias</S.Title>
       <S.Content themeSelected={theme}>
-        <LatestIncidents data={data} />
-        <ListIncidents data={dataListIncidents} />
+        <Recommendations data={recommendations}  />
+        <PostList data={posts}  />
       </S.Content>
-      <S.Footer>
-        <TouchableOpacity onPress={() => {}}>
-          {/* <svg.PlusCircle /> */}
-        </TouchableOpacity>
-      </S.Footer>
+      
     </S.Container>
   );
 };

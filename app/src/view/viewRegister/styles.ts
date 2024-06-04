@@ -19,13 +19,14 @@ export const Header = styled.View`
   margin-bottom: 20px;
   align-items: center;
   margin: 0 4%;
-  background-color: red;
 `;
 
 export const Title = styled.Text`
   font-size: 36px;
   font-weight: bold;
-  color: #007bff;
+  color: #734E00;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 export const Subtitle = styled.Text`
@@ -35,12 +36,13 @@ export const Subtitle = styled.Text`
 `;
 
 export const Form = styled.View`
-  margin: 15px;
+  margin: 25px;
 `;
 
 export const Buttons = styled.View`
   margin: 0 4%;
   align-items: center;
+  margin-bottom: 8px;
 `;
 
 export const Button = styled.View`
@@ -100,12 +102,11 @@ export const FormBase = styled.View`
   border-radius: 8px;
   border-color: #a4e1ff;
   border-width: 1px;
-  margin: 0 4%;
+  margin: 0 7%;
   margin-top: 15px;
 `;
 
 export const Logo = styled.View`
   display: flex;
-  width: 50%;  
-  background-color: aqua;
+  width: 40%;  
 `;
