@@ -10,7 +10,11 @@ import { ReactComponent as Star } from './star.svg';
 import { ReactComponent as Globo } from './globo.svg';
 import { ReactComponent as Onu } from './onu.svg';
 import { ReactComponent as SDG } from './SDG.svg';
-
+import { ReactComponent as HomeHeader } from './imagensTopo.svg';
+import { ReactComponent as Profile } from './perfil.svg';
+import { ReactComponent as IconHome } from './iconHome.svg';
+import { ReactComponent as IconSchedule } from './iconSchedule.svg';
+import { ReactComponent as IconOnu } from './iconOnu.svg';
 
 const svg = {
   EcoMilesPlanet,
@@ -24,6 +28,11 @@ const svg = {
   Globo,
   Onu,
   SDG,
+  HomeHeader,
+  Profile,
+  IconHome,
+  IconSchedule,
+  IconOnu
 };
 
 export default svg;

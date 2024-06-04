@@ -17,5 +17,4 @@ export const Container = styled.div`
 
 export const Page = styled.div`
   display: flex;
-  width: 70%;
 `;

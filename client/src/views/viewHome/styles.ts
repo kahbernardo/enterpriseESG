@@ -3,11 +3,10 @@ import themes from 'themes/index';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
   justify-content: center;
-  flex-grow: 1;
   flex-direction: row;
 `;
 
@@ -15,7 +14,7 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 50px;
+  min-height:40vh;
 `;
 
 export const Image = styled.div`
@@ -121,4 +120,17 @@ export const Registers = styled.div`
   align-items: center;
   margin-top: 60px;
 
+`;
+
+export const Reserved = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  background-color:#383838;
+  color: #fff;
+  height:40px;
+  width:100%;
+  position:absolute;
+  bottom:0;
 `;

@@ -35,8 +35,9 @@ const cssDesactive = css`
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin: 8px;
+flex-direction:column;
+height: fit-content;
+background-color:red;
 `;
 
 interface IButton {
@@ -51,4 +52,49 @@ export const Button = styled.div<IButton>`
   ${(p: IButton) => (p.active == true ? cssActive : cssDesactive)};
   color: #565656;
   font-family: ${themes.fontFamily.koulen};
+`;
+
+
+export const MenuWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #325e70;
+  width:99vw;
+  padding: 10px;
+  height: 80px;
+`;
+
+export const MenuItem = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0 20px;
+  flex-direction:column;
+  cursor: pointer;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: #21BDFA;
+  }
+`;
+
+export const SearchWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+
+  input {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+  }
 `;

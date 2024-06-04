@@ -7,6 +7,7 @@ import serviceMovies from 'services/serviceMovies';
 import ListMovies from 'components/listMovies';
 import { IMovie } from 'domains/interfaces/api';
 import ButtonGo from 'components/buttonGo';
+import Menu from 'components/menu';
 
 const ViewHome = () => {
   const navigate = useNavigate();
@@ -23,7 +24,8 @@ const ViewHome = () => {
 
   return (
     <S.Container>
-      <S.Body>
+        <Menu/>
+      {/* <S.Body>
         <S.Image>
           <S.IconLogo
             src={require('../../assets/png/logoCineHorizontal.png')}
@@ -41,16 +43,8 @@ const ViewHome = () => {
         <S.Row>
           <ListMovies data={list} />
         </S.Row>
-        <S.Registers>
-          <S.Button>
-            <ButtonGo
-              type={3}
-              label={'Fechar'}
-              onClick={() => navigate('/')}
-            />
-          </S.Button>
-        </S.Registers>
-      </S.Body>
+      </S.Body> */}
+      <S.Reserved>Todos os direitos reservados </S.Reserved>
     </S.Container>
   );
 };
