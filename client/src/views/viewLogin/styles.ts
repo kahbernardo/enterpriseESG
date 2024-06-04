@@ -10,36 +10,48 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  flex-direction: row;
-  background-color: #01234B;
+  background-color: #FFF;
 `;
 
 export const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  justify-content:space-between;
+  align-items:flex-start;
+`;
+export const InnerBody = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
 export const Icon = styled.div`
   display: flex;
-  width: 600px;  
+  width: fit-content;  
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  margin:0 50px 0 0;
 `;
 
-export const LogoCine = styled.img`
+export const UpperIcon = styled.div`
   display: flex;
-  width: 80%;
+  width: 363px;  
+  height:280px;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
 
 export const Form = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   width: 500px;
-  margin: 0 50px 0 60px;
-  padding: 50px 0;
+  height:345px;
+  margin: 0 0 0 150px;
+  padding: 15px;
+  background-color:#E1F1F8;
+  border-radius:10px;
 `;
 
 export const Image = styled.div`
@@ -49,10 +61,6 @@ export const Image = styled.div`
   align-items: center;
 `;
 
-export const IconEcoMiles = styled.img`
-  display: flex;
-  width: 80%;
-`;
 
 export const Input = styled.div`
   display: flex;
@@ -81,13 +89,17 @@ export const Registers = styled.div`
   flex-direction: column;
 `;
 
-export const Or = styled.div`
+export const Row = styled.div`
   display: flex;
-  margin: 30px 0;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: ${themes.colors.v3};
+  width:100%;
+  justify-content:space-between;
+  align-items:flex-end
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const LinkLabel = styled.div`
@@ -96,4 +108,23 @@ export const LinkLabel = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+`;
+export const Title = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #734E00;
+  text-align: center;
+`;
+
+export const TitleBase = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:32px;
+  margin: 30px 0;
+  width:910px;
 `;

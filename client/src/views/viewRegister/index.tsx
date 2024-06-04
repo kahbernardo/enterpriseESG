@@ -6,7 +6,7 @@ import LinkLabel from 'components/linkLabel';
 import { EInputPosition, EInputType } from 'domains/enums/EInput';
 import { FormProvider, useForm } from 'react-hook-form';
 import * as S from './styles';
-
+import svg from 'assets/svg';
 import serviceAuth from 'services/serviceAuth';
 import { IRegister } from 'domains/interfaces/register';
 
@@ -27,8 +27,13 @@ const ViewRegister = () => {
   return (
     <S.Container>
       <S.Body>
+        <S.UpperIcon>
+          <svg.SDG/>
+          <svg.Onu/>
+        </S.UpperIcon>
         <S.Icon>
-          <S.LogoCine src={require('../../assets/png/logoCine.png')} alt={''} />
+          <S.Title>Saber Global</S.Title>
+          <svg.Globo height={100} width={100}/>
         </S.Icon>
         <FormProvider {...methods}>
           <S.Form>
