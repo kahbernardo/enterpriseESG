@@ -60,9 +60,9 @@ export const MenuWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #325e70;
-  width:99vw;
-  padding: 10px;
+  width:100vw;
   height: 80px;
+  padding:5px 0;
 `;
 
 export const MenuItem = styled.div`
@@ -85,12 +85,35 @@ export const MenuItem = styled.div`
   }
 `;
 
+
+export const ProfileItem = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left:20px;
+  flex-direction:column;
+  cursor: pointer;
+  justify-content:center;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    color: #21BDFA;
+  }
+`;
+
 export const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
   background-color: white;
   border-radius: 20px;
   padding: 5px 10px;
+  margin-left:200px
 
   input {
     border: none;

@@ -12,9 +12,10 @@ import { ReactComponent as Onu } from './onu.svg';
 import { ReactComponent as SDG } from './SDG.svg';
 import { ReactComponent as HomeHeader } from './imagensTopo.svg';
 import { ReactComponent as Profile } from './perfil.svg';
-import { ReactComponent as IconHome } from './iconHome.svg';
-import { ReactComponent as IconSchedule } from './iconSchedule.svg';
+import { ReactComponent as IconHome } from './home.svg';
+import { ReactComponent as IconSchedule } from './eventos.svg';
 import { ReactComponent as IconOnu } from './iconOnu.svg';
+import { ReactComponent as Search } from './search.svg';
 
 const svg = {
   EcoMilesPlanet,
@@ -32,7 +33,8 @@ const svg = {
   Profile,
   IconHome,
   IconSchedule,
-  IconOnu
+  IconOnu,
+  Search
 };
 
 export default svg;

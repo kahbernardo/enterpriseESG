@@ -1,8 +1,10 @@
 import { EActiveView } from 'domains/enums/EActiveView';
 import { useNavigate } from 'react-router-dom';
-import InputDefault from 'components/inputDefault';
+import SearchInput from 'components/searchInput';
 import * as S from './styles';
 import svg from 'assets/svg';
+
+
 type TProps = {
   active?: EActiveView;
 };
@@ -41,17 +43,17 @@ const Menu = ({ active = EActiveView.home }: TProps) => {
       <svg.HomeHeader />
     <S.MenuWrapper>
       <S.MenuItem>
-        <svg.Globo height={87} width={87}/>
+        <svg.Globo height={65} width={65}/>
       </S.MenuItem>
-      <S.MenuItem><svg.IconHome/>Home</S.MenuItem>
-      <S.MenuItem><svg.IconSchedule/>Eventos</S.MenuItem>
-      <S.MenuItem><svg.IconOnu/>ONU</S.MenuItem>
+      <S.MenuItem><svg.IconHome height={115} width={115}/></S.MenuItem>
+      <S.MenuItem><svg.IconSchedule height={65} width={65}/></S.MenuItem>
+      <S.MenuItem><svg.IconOnu height={75} width={75}/></S.MenuItem>
       <S.SearchWrapper>
-        <input type="text" placeholder="Pesquisar" />
+        <SearchInput  icon={<svg.Search />} placeholder="Pesquisar"/>
       </S.SearchWrapper>
-      <S.MenuItem>
+      <S.ProfileItem>
         <svg.Profile></svg.Profile>
-      </S.MenuItem>
+      </S.ProfileItem>
     </S.MenuWrapper>
     </S.Container>
   );
