@@ -8,6 +8,7 @@ import ListMovies from 'components/listMovies';
 import { IMovie } from 'domains/interfaces/api';
 import ButtonGo from 'components/buttonGo';
 import Menu from 'components/menu';
+import ProfileCard from 'components/profileInfo';
 
 const ViewHome = () => {
   const navigate = useNavigate();
@@ -25,8 +26,13 @@ const ViewHome = () => {
   return (
     <S.Container>
         <Menu/>
-      {/* <S.Body>
-        <S.Image>
+       <S.Body>
+        <ProfileCard         
+        image="/path/to/image.png"
+        name="Abigail Lima"
+        profession="Educadora"
+        location="São Paulo"/>
+        {/*<S.Image>
           <S.IconLogo
             src={require('../../assets/png/logoCineHorizontal.png')}
             alt={''}
@@ -42,8 +48,8 @@ const ViewHome = () => {
         </S.BaseButtom>
         <S.Row>
           <ListMovies data={list} />
-        </S.Row>
-      </S.Body> */}
+        </S.Row>*/}
+      </S.Body> 
       <S.Reserved>Todos os direitos reservados </S.Reserved>
     </S.Container>
   );

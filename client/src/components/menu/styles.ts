@@ -63,6 +63,7 @@ export const MenuWrapper = styled.div`
   width:100vw;
   height: 80px;
   padding:5px 0;
+  padding-left:5px;
 `;
 
 export const MenuItem = styled.div`

@@ -7,14 +7,15 @@ export const Container = styled.div`
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  overflow-x:hidden;
 `;
 
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height:40vh;
+  min-height:60vh;
 `;
 
 export const Image = styled.div`
