@@ -16,6 +16,10 @@ import { ReactComponent as IconHome } from './home.svg';
 import { ReactComponent as IconSchedule } from './eventos.svg';
 import { ReactComponent as IconOnu } from './iconOnu.svg';
 import { ReactComponent as Search } from './search.svg';
+import { ReactComponent as Edu } from './chatbot.svg';
+import { ReactComponent as Like } from './like.svg';
+import { ReactComponent as Comment } from './comment.svg';
+import { ReactComponent as Share } from './share.svg';
 
 const svg = {
   EcoMilesPlanet,
@@ -34,7 +38,11 @@ const svg = {
   IconHome,
   IconSchedule,
   IconOnu,
-  Search
+  Search,
+  Edu,
+  Like,
+  Comment,
+  Share,
 };
 
 export default svg;

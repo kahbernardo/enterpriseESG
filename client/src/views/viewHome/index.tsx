@@ -8,7 +8,10 @@ import ListMovies from 'components/listMovies';
 import { IMovie } from 'domains/interfaces/api';
 import ButtonGo from 'components/buttonGo';
 import Menu from 'components/menu';
+import FeedInput from 'components/feedInput';
+import Recommendations from 'components/recommendations';
 import ProfileCard from 'components/profileInfo';
+import Post from 'components/post'
 
 const ViewHome = () => {
   const navigate = useNavigate();
@@ -32,23 +35,13 @@ const ViewHome = () => {
         name="Abigail Lima"
         profession="Educadora"
         location="São Paulo"/>
-        {/*<S.Image>
-          <S.IconLogo
-            src={require('../../assets/png/logoCineHorizontal.png')}
-            alt={''}
-          />
-        </S.Image>
-        <S.BaseButtom>
-          <svg.PlusCircle
-            width={40}
-            onClick={() => {
-              navigate('/registerMovie');
-            }}
-          />
-        </S.BaseButtom>
-        <S.Row>
-          <ListMovies data={list} />
-        </S.Row>*/}
+        <S.Feed>
+        <FeedInput icon={<svg.Profile height={122} width={122}/>}/>
+        <Recommendations/>
+        <Post/>
+        <Post/>
+        <Post/>
+        </S.Feed>
       </S.Body> 
       <S.Reserved>Todos os direitos reservados </S.Reserved>
     </S.Container>

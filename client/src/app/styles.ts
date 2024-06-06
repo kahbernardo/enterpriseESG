@@ -4,15 +4,16 @@ export const Container = styled.div`
   body {
     margin: 0;
     padding: 0;
-    background-color: #FFF;
+    background-color: #fff;
   }
 
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: row;
   justify-content: center;
-  background-color: #FFF;
+  background-color: #fff;
+  overflow-x: hidden;
 `;
 
 export const Page = styled.div`

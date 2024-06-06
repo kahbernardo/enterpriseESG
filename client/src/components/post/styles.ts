@@ -35,10 +35,16 @@ const cssDesactive = css`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   height: fit-content;
-  min-height: 65vh;
-  background-color: red;
+  width: 80%;
+  flex-direction: column;
+`;
+export const InnerContainer = styled.div`
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  border-bottom: 1px solid #325e70;
+  margin: 25px;
 `;
 
 interface IButton {
@@ -55,15 +61,15 @@ export const Button = styled.div<IButton>`
   font-family: ${themes.fontFamily.koulen};
 `;
 
-export const MenuWrapper = styled.div`
+export const PostWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #325e70;
-  width: 100vw;
-  height: 80px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 180px;
   padding: 5px 0;
-  padding-left: 5px;
+  padding-left: 20px;
 `;
 
 export const MenuItem = styled.div`
@@ -72,6 +78,7 @@ export const MenuItem = styled.div`
   color: white;
   margin: 0 20px;
   flex-direction: column;
+
   cursor: pointer;
 
   img {
@@ -118,4 +125,36 @@ export const SearchWrapper = styled.div`
     outline: none;
     margin-left: 5px;
   }
+`;
+
+export const Title = styled.div`
+  display: flex;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #545454;
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #545454;
+  text-align: justify;
+`;
+export const ImageContainer = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+`;
+
+export const Image = styled.img`
+  width: calc(100% / 3 - 8px);
+  height: auto;
+  object-fit: cover;
 `;

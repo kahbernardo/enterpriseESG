@@ -8,14 +8,15 @@ export const Container = styled.div`
   font-family: ${themes.fontFamily.inter};
   justify-content: center;
   flex-direction: column;
-  overflow-x:hidden;
+  overflow-x: hidden;
+  position: relative;
 `;
 
 export const Body = styled.div`
   display: flex;
-  flex-direction: column;
   width: 100%;
-  min-height:60vh;
+  min-height: 100vh;
+  margin-bottom: 50px;
 `;
 
 export const Image = styled.div`
@@ -97,7 +98,6 @@ export const TitleBase = styled.div`
   margin-bottom: 40px;
 `;
 
-
 export const Title = styled.div`
   display: flex;
   font-size: 38px;
@@ -120,18 +120,26 @@ export const Registers = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 60px;
-
 `;
 
 export const Reserved = styled.div`
   display: flex;
   flex-direction: column;
-  align-items:center;
-  justify-content:center;
-  background-color:#383838;
+  align-items: center;
+  justify-content: center;
+  background-color: #383838;
   color: #fff;
-  height:40px;
-  width:100%;
-  position:absolute;
-  bottom:0;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const Feed = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  width: 100%;
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as S from './styles';
+import svg from 'assets/svg';
 
 interface ProfileCardProps {
   image: string;
@@ -12,6 +13,7 @@ interface ProfileCardProps {
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, profession, location }) => {
   return (
+    <S.Container>
     <S.Card>
       <S.ImageWrapper>
         <S.Image src={image} alt={name} />
@@ -26,6 +28,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, profession, loca
         <S.Button>Conexões</S.Button>
       </S.Info>
     </S.Card>
+    <svg.Edu/>
+    </S.Container>
   );
 };
 

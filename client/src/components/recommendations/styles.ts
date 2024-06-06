@@ -37,8 +37,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: fit-content;
-  min-height: 65vh;
-  background-color: red;
+  width: 80%;
+  border-bottom: 1px solid #325e70;
 `;
 
 interface IButton {
@@ -57,13 +57,15 @@ export const Button = styled.div<IButton>`
 
 export const MenuWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #325e70;
-  width: 100vw;
-  height: 80px;
+  width: 100%;
+  min-height: 80px;
   padding: 5px 0;
   padding-left: 5px;
+
+  margin: 30px 0;
 `;
 
 export const MenuItem = styled.div`
@@ -72,6 +74,7 @@ export const MenuItem = styled.div`
   color: white;
   margin: 0 20px;
   flex-direction: column;
+
   cursor: pointer;
 
   img {
@@ -118,4 +121,14 @@ export const SearchWrapper = styled.div`
     outline: none;
     margin-left: 5px;
   }
+`;
+
+export const Title = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #545454;
+  text-align: center;
 `;
