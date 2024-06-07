@@ -1,0 +1,162 @@
+import styled from 'styled-components';
+import themes from 'themes/index';
+
+export const Container = styled.div`
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  font-family: ${themes.fontFamily.inter};
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+`;
+
+export const Body = styled.div`
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 50px;
+`;
+
+export const Image = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  margin-top: 100px;
+`;
+
+export const IconLogo = styled.img`
+  display: flex;
+  width: 50%;
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 10%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Button = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 20px;
+`;
+
+export const ButtonTitle = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #54585c;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+`;
+
+export const ButtonImage = styled.div`
+  display: flex;
+`;
+
+export const ButtonImg = styled.img`
+  display: flex;
+  width: 100%;
+`;
+
+export const ButtonRules = styled.div`
+  display: flex;
+  margin: 0 15.5%;
+  font-size: 23px;
+  font-family: 'Roboto';
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #585858;
+  text-align: justify;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+`;
+
+export const BaseButtom = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+`;
+
+export const TitleBase = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  margin-bottom: 40px;
+`;
+
+export const Title = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #212121;
+  margin: 5px;
+  text-align: center;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  font-size: 25px;
+  font-family: 'Roboto';
+  letter-spacing: 3px;
+  color: #212121;
+  margin: 5px;
+`;
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Registers = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+`;
+
+export const Reserved = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #383838;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  height: 85px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1f1f8;
+  color: #165c7d;
+  border-top: 2px solid #c9d4d9;
+  margin: 40px;
+  width: 95%;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+`;

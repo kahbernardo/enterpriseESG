@@ -3,43 +3,34 @@ import themes from 'themes/index';
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
+  flex-direction: column;
   font-family: ${themes.fontFamily.inter};
   justify-content: center;
-  flex-grow: 1;
   flex-direction: column;
-  justify-content:flex-start
-`;
-export const MovieContainer = styled.div`
-  display: flex;
-  width: 100%;
-  font-family: ${themes.fontFamily.inter};
-  justify-content: center;
-  flex-grow: 1;
-  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
 `;
 
 export const Body = styled.div`
   display: flex;
-  flex-direction: row;
   width: 100%;
+  min-height: 100vh;
   margin-bottom: 50px;
 `;
 
 export const Image = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width:100%;
-  height:50%;
+  margin-bottom: 80px;
+  margin-top: 100px;
 `;
 
-export const IconEcoMiles = styled.img`
+export const IconLogo = styled.img`
   display: flex;
-  width: 100%;
-  height:70%;
-  justify-content:flex-start;
+  width: 50%;
 `;
 
 export const Buttons = styled.div`
@@ -53,9 +44,8 @@ export const Buttons = styled.div`
 export const Button = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 4px 1px;
   width: 40%;
-  margin: 0 3%;
+  margin: 20px;
 `;
 
 export const ButtonTitle = styled.div`
@@ -96,6 +86,7 @@ export const ButtonRules = styled.div`
 export const BaseButtom = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
 `;
 
 export const TitleBase = styled.div`
@@ -107,76 +98,65 @@ export const TitleBase = styled.div`
   margin-bottom: 40px;
 `;
 
-
 export const Title = styled.div`
   display: flex;
   font-size: 38px;
   font-family: 'Roboto';
   font-weight: 500;
   letter-spacing: 3px;
-  color: #FFFF;
+  color: #212121;
+  margin: 5px;
   text-align: center;
 `;
-export const MovieTitle = styled.div`
-  display: flex;
-  font-size: 30px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #FFFF;
-  text-align: center;
-`;
-export const MovieSinopsis = styled.p`
-  font-size: 20px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #FFFF;
-  text-align: left;
-  margin:5px 0 0 0;
-`;
 
-
-export const MovieType = styled.div`
+export const Text = styled.div`
   display: flex;
   font-size: 25px;
   font-family: 'Roboto';
+  letter-spacing: 3px;
+  color: #212121;
+  margin: 5px;
+`;
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Registers = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+`;
+
+export const Reserved = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #383838;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  height: 85px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1f1f8;
+  color: #165c7d;
+  border-top: 2px solid #c9d4d9;
+  margin: 40px;
+  width: 95%;
+  font-size: 38px;
+  font-family: 'Roboto';
   font-weight: 500;
   letter-spacing: 3px;
-  color: #FFFF;
-  text-align: center;
-  margin:20px 0 0 0;
 `;
-
-export const ButtonRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items:center;
-  height:80px;
-  `;
-
-export const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items:center;
-`;
-export const TextRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content:space-between;
-`;
-
-export const StarRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items:flex-start;
-  width:100px;
-  margin:5px 0;
-  color:#F9A300;
-  font-size:25px;
-  align-items:center;
-`;
-
-
-

@@ -2,10 +2,10 @@ import { EActiveView } from 'domains/enums/EActiveView';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ViewLogin from 'views/viewLogin';
 import ViewRegister from '../views/viewRegister';
-import ViewRegisterMovie from '../views/viewRegisterMovie';
+import ViewEventList from '../views/viewEventList';
 import ViewHome from '../views/viewHome';
 import ViewNotFound from '../views/viewNotFound';
-import ViewMovieDetail from '../views/viewMovieDetail';
+import ViewEventDetail from '../views/viewEventDetail';
 
 const RouteController = () => {
   return (
@@ -13,9 +13,9 @@ const RouteController = () => {
       <Routes>
         <Route path={`/${EActiveView.home}`} Component={ViewHome} />
         <Route path={`/register`} Component={ViewRegister} />
-        <Route path={`/registerMovie`} Component={ViewRegisterMovie} />
+        <Route path={`/eventList`} Component={ViewEventList} />
         <Route path={`/`} Component={ViewLogin} />
-        <Route path={`/movieDetail`} Component={ViewMovieDetail} />
+        <Route path={`/eventDetail`} Component={ViewEventDetail} />
         <Route path="*" Component={ViewNotFound} />
       </Routes>
     </BrowserRouter>
